@@ -52,27 +52,28 @@ tuiles_colors={0:"#EEEEEE",
 
 
 
-# --- CODE GENERAL ---
+# --- CODE GENERAL  + TITRE ---
 window = tk.Tk()
 window.geometry("800x650")
 window.title("MA20_2048_Cagli Eran")
+window.configure(bg=tuiles_colors[1])
 
-frame = tk.Frame(window)
+frame = tk.Frame(window, bg=tuiles_colors[1])
 frame.pack()
 
 frame_game = tk.Frame(window)
 frame_game.pack()
 
-lbl_2048 = tk.Label(frame, text="2048", font=("Arial", 25))
+lbl_2048 = tk.Label(frame, text="2048", font=("Arial", 35),bg=tuiles_colors[1])
 lbl_2048.grid(row=0, column=2)
 
 btn_newgame = tk.Button(frame, text="nouvelle partie", font=("Arial", 18),background="#FFE6CC")
 btn_newgame.grid(row=1, column=2)
 
-lbl_score = tk.Label(frame, text="score:", font=("Arial", 25))
+lbl_score = tk.Label(frame, text="score:", font=("Arial", 25),bg=tuiles_colors[1])
 lbl_score.grid(row=2, column=1)
 
-lbl_record = tk.Label(frame, text="record:", font=("Arial", 25))
+lbl_record = tk.Label(frame, text="record:", font=("Arial", 25),bg=tuiles_colors[1])
 lbl_record.grid(row=2, column=3)
 
 ent_score = tk.Label(frame, text="", font=("Arial", 10, "bold"), height=4,width=20, relief="sunken")
