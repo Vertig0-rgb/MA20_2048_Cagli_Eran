@@ -10,10 +10,15 @@ def display():
 
     for line in range(len(game)):
         for col in range(len(game[line])):
+            value = game[line][col]
+            font_color = "black" if 0< value < 10 else "white"
+            labels[line][col].configure(text=value,bg=tuiles_colors[value],fg=font_color)
+
             if game[line][col] == 0:
                 text=""
             else :
                 text = str(2 ** game[line][col])
+
 
             labels[line][col].config(text=text, bg=tuiles_colors[game[line][col]])
 
