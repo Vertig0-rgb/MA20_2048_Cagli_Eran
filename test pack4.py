@@ -14,3 +14,6 @@ def pack4(a, b, c, d):
         c, d = 2 * c, 0
 
     return a, b, c, d
+print(pack4(0,2,0,2))
+print(pack4(0,0,8,8))
+print(pack4(2,32,0,32))
