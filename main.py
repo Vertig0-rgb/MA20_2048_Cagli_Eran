@@ -12,8 +12,12 @@ def display():
         for col in range(len(game[line])):
             value = game[line][col]
             font_color = "black" if 0< value < 10 else "white"
-            labels[line][col].configure(text=value,bg=tuiles_colors[value],fg=font_color)
 
+            if value < 10:
+                width=4
+            else:
+                width=8
+            labels[line][col].configure(text=value,bg=tuiles_colors[value],fg=font_color, width=width ,height=int(width/2), font=("Arial", int(120/width)))
             if game[line][col] == 0:
                 text=""
             else :
@@ -91,7 +95,7 @@ for line in range(len(game)):
     for col in range(len(game[line])):
         # creation without placement
         labels[line][col] = tk.Label (frame_game, width=8, height=4, borderwidth=1, relief="solid", font=("Arial", 15))
-        labels[line][col].grid(row=line + 1, column=col)
+        labels[line][col].grid(row=line + 1, column=col, padx=10, pady=10)
 
 display()
 mainloop()

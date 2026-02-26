@@ -1,10 +1,12 @@
 def pack4(a, b, c, d):
+# --- partie ou on enlève les 0 vvv ---#
     if c == 0:
         c, d = d, 0
     if b == 0:
         b, c, d = c, d, 0
     if a == 0:
         a, b, c, d = b, c, d, 0
+#--- partie ou on fusionne vvv ---#
 
     if a == b:
         a, b, c, d = 2 * a, c, d, 0
