@@ -1,4 +1,8 @@
+#Eran cagli
+#05.03.2026
+# projet 2048 MA-20
 
+#tableau du jeu
 game = [[0, 0, 0, 0],
         [0, 1, 0, 0],
         [0, 0, 1, 0],
@@ -15,7 +19,7 @@ labels=[[None,None,None,None],
         [None,None,None,None],
         [None,None,None,None]]
 
-
+#definition des couleurs selon les valeur
 tuiles_colors={0:"#EEEEEE",
                1:"#FFFFFF",
                2:"#DAE8FC",
@@ -33,7 +37,7 @@ tuiles_colors={0:"#EEEEEE",
 
 
 
-
+#fonction qui fusionne les cases entre elles quand elles sont identique et cote a cote
 def pack4(a, b, c, d):
 # --- partie ou on enlève les 0 vvv ---#
 
@@ -54,6 +58,8 @@ def pack4(a, b, c, d):
 
     return a, b, c, d
 
+
+#fonction qui permet de faire bouger les tuiles, haut + bas + gauche + droite
 def down():
     for col in range(4):
         (game[3][col],game[2][col],game[1][col],game[0][col])= pack4(game[3][col],game[2][col],game[1][col],game[0][col])

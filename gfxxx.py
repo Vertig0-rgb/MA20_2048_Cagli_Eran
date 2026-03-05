@@ -1,11 +1,13 @@
 #Eran cagli
-#05.02.2026
+#05.03.2026
 # projet 2048 MA-20
 from core import *
 import tkinter as tk
 from importlib.metadata import entry_points
 from tkinter import mainloop
 # --- DEF + VARIABLE ---
+
+#fonction qui ecris la valeur de la tuiles + qui changent la couleur de police et la taille si > 1000
 def display():
 
     for line in range(len(game)):
@@ -25,6 +27,8 @@ def display():
 
 
             labels[line][col].config(text=text, bg=tuiles_colors[game[line][col]])
+
+#fonction qui fais que les touche WASD, wasd et flèches appele les fonctions mouvement corespondant
 def keypress(event):
     key = event.keysym
 
